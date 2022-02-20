@@ -1,0 +1,14 @@
+# Compiled and cached output
+.swc
+dist
+
+# Dependencies
+node_modules
+
+# Misc
+coverage
+yarn-error.log
+
+# System Files
+.DS_Store
+Thumbs.db
