@@ -22,7 +22,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version-file: ".nvmrc"
+          node-version: "lts/*"
           cache: "yarn"
 
       - name: Install dependencies
@@ -45,8 +45,8 @@ jobs:
       - name: Create Release Pull Request or Publish to GitHub packages
         uses: changesets/action@v1.2.0
         with:
-          commit: ":bookmark: update version and deploy packages"
-          title: ":bookmark: update version and deploy packages"
+          commit: ":rocket: update version and deploy packages"
+          title: ":rocket: update version and deploy packages"
           publish: yarn changeset publish
           version: yarn changeset version
         env:
