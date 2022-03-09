@@ -1,5 +1,5 @@
 {
-  "extends": ["config:base", ":preserveSemverRanges"],
+  "extends": ["config:base", ":preserveSemverRanges", "group:allNonMajor"],
   "assignees": ["mheob"],
   "reviewers": ["mheob"],
   "labels": ["📌 dependencies"],
