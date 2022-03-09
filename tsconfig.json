@@ -1,14 +1,17 @@
 {
   "compilerOptions": {
     "target": "ES2016",
-    "module": "CommonJS",
+    "module": "ESNext",
     "outDir": "dist",
+    "types": ["node"],
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
     "noImplicitAny": true,
     "skipLibCheck": true
   },
-  "include": ["."],
+  "include": ["./src"],
   "exclude": ["node_modules", "./src/**/*.test.*", "dist"]
 }
