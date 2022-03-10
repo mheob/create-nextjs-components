@@ -11,18 +11,35 @@
     "plugin:unicorn/recommended",
     "plugin:prettier/recommended"
   ],
-  "rules": {
-    "@typescript-eslint/consistent-type-imports": "error",
-    "@typescript-eslint/no-unused-vars": [
-      "warn",
-      { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }
-    ],
-    "@typescript-eslint/quotes": ["warn", "single", { "avoidEscape": true }],
-    "import/no-unresolved": "off",
-    "no-console": ["warn", { "allow": ["warn", "error"] }],
-    "prettier/prettier": "error",
-    "unicorn/import-style": ["error", { "styles": { "chalk": false } }],
-    "unicorn/no-process-exit": "off",
-    "unicorn/prevent-abbreviations": ["error", { "replacements": { "args": false } }]
-  }
+  "overrides": [
+    {
+      "files": ["*.ts", "*.js"],
+      "rules": {
+        "import/no-unresolved": "off",
+        "prettier/prettier": "error",
+        "unicorn/import-index": "error",
+        "unicorn/import-style": ["error", { "styles": { "chalk": false } }],
+        "unicorn/no-process-exit": "off",
+        "unicorn/prevent-abbreviations": ["error", { "replacements": { "args": false } }]
+      }
+    },
+    {
+      "files": ["*.ts"],
+      "rules": {
+        "@typescript-eslint/consistent-type-imports": "error",
+        "@typescript-eslint/no-unused-vars": [
+          "warn",
+          { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }
+        ],
+        "@typescript-eslint/quotes": ["warn", "single", { "avoidEscape": true }]
+      }
+    },
+    {
+      "files": ["bin/*", "*.js"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off",
+        "unicorn/prefer-module": "off"
+      }
+    }
+  ]
 }
