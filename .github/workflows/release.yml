@@ -43,7 +43,7 @@ jobs:
           token: ${{ secrets.CODECOV_TOKEN }}
 
       - name: Create Release Pull Request or Publish to GitHub packages
-        uses: changesets/action@v1.4.4
+        uses: changesets/action@v1.4.5
         with:
           commit: ":rocket: update version and deploy packages"
           title: ":rocket: update version and deploy packages"
